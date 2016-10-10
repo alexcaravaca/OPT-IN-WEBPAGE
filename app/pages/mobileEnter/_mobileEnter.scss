@@ -1,0 +1,134 @@
+.p__mobileEnter{
+
+  margin-left: 40px;
+  margin-top: 40px;
+  color: #333333;
+
+  h2{
+    font-size: 32px;
+
+  }
+  p{
+    font-size: 18px;
+    width: 640px;
+  }
+
+
+  label{
+    color: #333333;
+    font-size: 16px;
+    font-weight: normal;
+    margin-right: 20px;
+
+
+  }
+
+  .numbersonly {
+    border: 1px solid #a8a8a8;
+    background-color: #e0e8f0;
+    height: 42px;
+    width: 62px;
+    margin-right: 10px;
+
+  }
+
+
+  #saveNumberBTN{
+    color: #fff;
+    width: 180px;
+    font-size: 14px;
+    margin-right: 20px;
+
+  }
+
+  .p__mobileEnter__bodyConteriner{
+    margin-top: 36px;
+    background: url(../images/mobile_enter_bodyIMG.png);
+    width: 902px;
+    position: relative;
+    border: 1px solid #a8a8a8;
+    padding-bottom: 20px;
+    .p__mobileEnter_container{
+      padding-top: 30px;
+      margin-left: 30px;
+    }
+
+    .p__mobileEnter__phoneNum{
+      padding-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .p__mobileEnter__terms{
+      border-bottom: 1px solid #888888;
+      width: 825px;
+      margin-bottom: 20px;
+    }
+
+    .p__mobileEnter__margintop20{
+      margin-top: 20px;
+      display: block;
+    }
+
+  }
+
+
+  input[type="checkbox"]{
+    display: none;
+  }
+  .checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
+    content: '';
+    background: #e0e8f0;
+    border: 1px solid #7e7e7e;
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center;
+    float: left;
+  }
+
+  .checkbox-custom:checked + .checkbox-custom-label:before {
+    background:url("../images/checked_box-img.png") no-repeat;
+  }
+
+  .checkbox-custom-label{
+    p {
+      font-size: 14px;
+      font-weight: bold;
+      margin-left: 30px;
+      width: 830px;
+    }
+  }
+
+
+  .p__mobileEnter__error{
+    display: none;
+    width: 900px;
+    border-top: 1px solid #888888;
+    border-bottom: 1px solid #888888;
+    margin-bottom: 20px;
+    p{
+      color: #e6001c;
+      font-size: 15px;
+      margin: 10px 0;
+      &::before{
+        content: url("../images/warning-triangle.png");
+        margin-right: 10px;
+
+      }
+    }
+
+    .p__mobileEnter__landline{
+      display: none;
+    }
+    .p__mobileEnter__norecord{
+      display: none;
+    }
+
+  }
+
+
+
+}
