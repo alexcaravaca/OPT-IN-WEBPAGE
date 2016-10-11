@@ -1,13 +1,13 @@
 <div class="p__mobileverify" data-action="mobileverify" xmlns="http://www.w3.org/1999/html">
     <h2>Verify Your Mobile Number</h2>
-    <p>{{Customer_Name}}, you have been successfully authenticated. Please read the disclosure below and provide your mobile number.</p>
+    <p>{{Customer_Name}}, you have been successfully authenticated.<br>Please read the disclosure below and provide your mobile number.</p>
 
 
     <div class="p__mobileverify__bodyConteriner">
         <div class="p__mobileEnter_container">
             <div class="p__mobileverify__error">
-                <p class="p__mobileverify__norecord">The number you entered does not match our records. Please enter the number again.</p>
-                <p class="p__mobileverify__landline">The number provided is a landline.  Please enter your mobile number below.</p>
+                <p class="p__mobileverify__norecord">The number you provided is not valid. Please enter the number again.</p>
+                <p class="p__mobileverify__landline">The number provided is a landline. Please enter your mobile number below.</p>
             </div>
 
             <p>Please <span class="bold"> update or confirm</span> your mobile number below: (Ex. (area code) XXX - XXXX)</p>
@@ -25,7 +25,9 @@
 
             <button type="button"  id="saveNumberBTN" class="blue_BTN">Save Number to File</button>
             <a class="cancel__BTN"> Cancel</a><br>
-            <a class="cancel__BTN p__mobileverify__margintop20"> I don’t wish to enter a number at this time</a>
+            <a class="cancel__BTN p__mobileverify__margintop20"> The number on file isn’t mine</a>
+            <span class="p__mobileverify__divider">/</span>
+            <a class=" p__mobileverify__link p__mobileverify__margintop20">I do not have a number to provide at this time</a>
 
         </div>
     </div>

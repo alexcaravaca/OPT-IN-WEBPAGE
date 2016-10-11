@@ -10,7 +10,7 @@
   }
   p{
     font-size: 18px;
-    width: 640px;
+    width: 690px;
   }
 
 
@@ -66,8 +66,13 @@
 
     .p__mobileverify__margintop20{
       margin-top: 20px;
-      display: block;
+      display: inline-block;
     }
+
+    .p__mobileverify__divider{
+      color: #1279bf;
+    }
+
 
   }
 
@@ -105,7 +110,7 @@
 
   .p__mobileverify__error{
     display: none;
-    width: 900px;
+    width: 840px;
     border-top: 1px solid #888888;
     border-bottom: 1px solid #888888;
     margin-bottom: 20px;
