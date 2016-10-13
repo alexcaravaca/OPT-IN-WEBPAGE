@@ -1,8 +1,12 @@
 .p__authentication{
-
-  margin-left: 40px;
   margin-top: 40px;
   color: #333333;
+
+  .p__authentication__wrapper{
+    margin-left: 40px;
+  }
+
+
 
   h2{
     font-size: 32px;

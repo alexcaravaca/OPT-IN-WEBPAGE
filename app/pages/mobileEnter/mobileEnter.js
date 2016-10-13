@@ -52,23 +52,16 @@ APP.mobileEnter = (function(){
     var initModal = function () {
         // Get the modal
         var modal = document.getElementById('p__mobileEnter__modal');
-
-
         var btn = document.getElementById("saveNumberBTN");
-
-
         var span = document.getElementsByClassName("p__mobileEnter_closeBTN")[0];
-
 
         btn.onclick = function() {
             modal.style.display = "block";
         }
 
-
         span.onclick = function() {
             modal.style.display = "none";
         }
-
 
         window.onclick = function(event) {
             if (event.target == modal) {
