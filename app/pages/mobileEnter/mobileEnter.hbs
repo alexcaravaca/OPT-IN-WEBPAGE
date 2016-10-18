@@ -3,7 +3,7 @@
     <div class="p__mobileEnter__wrapper">
 
         <h2>Enter Your Mobile Number</h2>
-        <p>{{Customer_Name}}, you have been successfully authenticated. Please read the disclosure below and provide your mobile number.</p>
+        <p>{Customer_Name}, you have been successfully authenticated. Please read the disclosure below and provide your mobile number.</p>
 
 
         <div class="p__mobileEnter__bodyConteriner">
@@ -15,9 +15,9 @@
 
                 <p>Please <span class="bold"> enter</span> your mobile number below: (Ex. (area code) XXX - XXXX)</p>
                     <div class="p__mobileEnter__phoneNum">
-                        <input class="numbersonly" type="text" name="phone-1" maxlength="3">
-                        <input class="numbersonly" type="text" name="phone-2" maxlength="3">
-                        <input class="numbersonly" type="text" name="phone-3" maxlength="4">
+                        <input class="numbersonly" type="text" id="phone-1" name="phone-1" maxlength="3">
+                        <input class="numbersonly" type="text" id="phone-2" name="phone-2" maxlength="3">
+                        <input class="numbersonly" type="text" id="phone-3" name="phone-3" maxlength="4">
 
                     </div>
 
@@ -27,8 +27,8 @@
                 </div>
 
                 <button type="button"  id="saveNumberBTN" class="blue_BTN">Save Number to File</button>
-                <a class="cancel__BTN"> Cancel</a><br>
-                <a class="cancel__BTN p__mobileEnter__margintop20"> I don’t wish to enter a number at this time</a>
+                <a class="cancel__BTN">Cancel</a><br>
+                <a class="cancel__BTN p__mobileEnter__margintop20">I don’t wish to enter a number at this time</a>
 
             </div>
 
@@ -51,7 +51,7 @@
 
             <div class="p__mobileEnter__modal_body">
 
-                <p> We have recorded your update, please note this may take up to 2 days to complete. If you have any questions please contact Citibank on behalf of {{Partner}} at portfolio toll free number. Thank you.</p>
+                <p> We have recorded your update, please note this may take up to 2 days to complete. If you have any questions please contact Citibank on behalf of {Partner} at portfolio toll free number. Thank you.</p>
                 <button class="blue_BTN p__mobileEnter_closeBTN">Close</button>
 
             </div>

@@ -3,10 +3,12 @@
 var APP = window.APP = window.APP || {};
 APP.mobileEnter = (function(){
 
+    var  inputValue1,inputValue2,inputValue3 = "";
+
     var bindEventsToUI = function() {
         // ...
 
-        $( ".numbersonly" ).keydown(function(e) {
+        $( ".numbersonly" ).keyup(function(e) {
             var key   = e.keyCode ? e.keyCode : e.which;
 
             if (!( [8, 9, 13, 27, 46, 110, 190].indexOf(key) !== -1 ||
@@ -15,6 +17,12 @@ APP.mobileEnter = (function(){
                     (key >= 48 && key <= 57 && !(e.shiftKey || e.altKey)) ||
                     (key >= 96 && key <= 105)
                 )) e.preventDefault();
+            else{
+
+                getcheckboxValue();
+
+
+            }
         });
 
 
@@ -40,6 +48,21 @@ APP.mobileEnter = (function(){
         initModal();
 
 
+    };
+    
+    
+    var getcheckboxValue = function () {
+
+        inputValue1 = document.getElementById("phone-1").value;
+        inputValue2 = document.getElementById("phone-2").value;
+        inputValue3 = document.getElementById("phone-3").value;
+
+
+        if(inputValue1 == "" && inputValue2 == "" && inputValue3 == ""){
+            $('input[type="checkbox"]').removeAttr('checked');
+        }else {
+            $('input[type="checkbox"]').prop('checked', 'false');
+        }
     };
 
     var init = function() {
