@@ -1,0 +1,70 @@
+.c__footer{
+  background-color: #333;
+  padding-top: 35px;
+  .c__footer__container {
+    width: 980px;
+
+    .c__footer__logo {
+      background: url("../images/citi_logo_footer.png");
+      width: 41px;
+      height: 26px;
+      margin-left: 25px;
+      margin-bottom: 15px;
+
+    }
+
+    .c__footer__items {
+      padding: 0;
+       width: 90%;
+      overflow: hidden;
+      border-bottom: 1px solid #525252;
+      border-top: 1px solid #525252;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      li {
+        float: left;
+        list-style: none;
+      }
+
+      .c__footer__link_copy{
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 12px;
+        float: left;
+        padding: 0 25px 0 0;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .c__footer__link {
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 12px;
+        float: left;
+        padding: 0 25px 0 0;
+        color: #fff;
+        text-decoration: none;
+
+        &:hover{
+          text-decoration: underline;
+        }
+
+      }
+    }
+
+    .c__footer__copy {
+      margin-top: 25px;
+      color: #fff;
+      font-size: 12px;
+      width: 930px;
+      p {
+        margin-bottom: 20px;
+      }
+
+      .c__footer__link2{
+        color: #fff;
+      }
+
+    }
+  }
+}

@@ -8,23 +8,31 @@ APP.mobileEnter = (function(){
     var bindEventsToUI = function() {
         // ...
 
-        $( ".numbersonly" ).keyup(function(e) {
+        $( ".numbersonly" ).keydown(function(e) {
             var key   = e.keyCode ? e.keyCode : e.which;
-
-            if (!( [8, 9, 13, 27, 46, 110, 190].indexOf(key) !== -1 ||
+            if (!( [8, 9, 13, 27, 46, 110].indexOf(key) !== -1 ||
                     (key == 65 && ( e.ctrlKey || e.metaKey  ) ) ||
                     (key >= 35 && key <= 40) ||
                     (key >= 48 && key <= 57 && !(e.shiftKey || e.altKey)) ||
                     (key >= 96 && key <= 105)
                 )) e.preventDefault();
-            else{
-
-                getcheckboxValue();
-
-
-            }
         });
 
+
+
+        $( ".numbersonly" ).keyup(function(e) {
+            inputValue1 = document.getElementById("phone-1").value;
+            inputValue2 = document.getElementById("phone-2").value;
+            inputValue3 = document.getElementById("phone-3").value;
+
+
+            if(inputValue1 == "" && inputValue2 == "" && inputValue3 == ""){
+              //  $('input[type="checkbox"]').removeAttr('checked');
+              //  console.log("entrooo value" + inputValue1);
+            }else {
+                $('input[type="checkbox"]').prop('checked', 'false');
+            }
+        });
 
         var container = document.getElementsByClassName("p__mobileEnter__phoneNum")[0];
         container.onkeyup = function(e) {
@@ -49,21 +57,7 @@ APP.mobileEnter = (function(){
 
 
     };
-    
-    
-    var getcheckboxValue = function () {
 
-        inputValue1 = document.getElementById("phone-1").value;
-        inputValue2 = document.getElementById("phone-2").value;
-        inputValue3 = document.getElementById("phone-3").value;
-
-
-        if(inputValue1 == "" && inputValue2 == "" && inputValue3 == ""){
-            $('input[type="checkbox"]').removeAttr('checked');
-        }else {
-            $('input[type="checkbox"]').prop('checked', 'false');
-        }
-    };
 
     var init = function() {
         var $element = $(arguments[0]);
@@ -74,23 +68,28 @@ APP.mobileEnter = (function(){
     
     var initModal = function () {
         // Get the modal
-        var modal = document.getElementById('p__mobileEnter__modal');
+        var saveNumberModal = document.getElementById("c__thankyoushort__modal");
+        var cancelModal = document.getElementById('c__processcancelled__modal');
+        var noCellModal = document.getElementById('c__nocell__modal');
+
+
+        var donotWishBtn = document.getElementById('p__mobileEnter__donotWish');
+
         var btn = document.getElementById("saveNumberBTN");
-        var span = document.getElementsByClassName("p__mobileEnter_closeBTN")[0];
+        var cancelBtn = document.getElementById("p__mobileEnter_cancelBTN");
 
         btn.onclick = function() {
-            modal.style.display = "block";
+            saveNumberModal.style.display = "block";
         }
 
-        span.onclick = function() {
-            modal.style.display = "none";
+        cancelBtn.onclick = function() {
+            cancelModal.style.display = "block";
         }
 
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
+        donotWishBtn.onclick = function() {
+            noCellModal.style.display = "block";
         }
+
     };
     
 

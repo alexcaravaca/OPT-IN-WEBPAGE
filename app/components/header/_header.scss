@@ -1,5 +1,19 @@
 .c-header{
-  background: url("../images/header-img.jpg") no-repeat;
-  height: 134px;
-  width: 984px;
+  .c-header__top{
+    background-color: #262626;
+    height: 24px;
+  }
+  .c-header__middle{
+    background: url("../images/header_midle_bg.gif") repeat-x;
+    height: 69px;
+  }
+  .c-header__container{
+    width: 985px;
+    margin: 0 auto;
+    .c-header__citi_logo{
+      padding-top: 10px;
+      padding-left: 30px;
+    }
+  }
+
 }

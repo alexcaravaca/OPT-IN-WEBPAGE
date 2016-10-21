@@ -3,7 +3,7 @@
     <div class="p__authentication__wrapper">
 
     <h2>Authentication Page</h2>
-    <p>In order to complete the account update, please verify your identity by entering your five digit billing zip code associated with your {Partner} account.</p>
+    <p class="p__authentication__copy">In order to complete the account update, please verify your identity by entering your five digit billing zip code associated with your {Partner} account.</p>
     <div class="p__authentication__error">
         <p>The number you entered does not match our records. Please enter the number again.</p>
     </div>
@@ -12,11 +12,11 @@
         <label for="zipcode">Billing Zip Code</label>
         <input id="zipcode" type="text" maxlength="5" value="">
         <button type="button"  id="zipBTN" class="blue_BTN">Proceed</button>
-        <a class="cancel__BTN">Cancel</a>
+        <a id="p__authentication__cancel" class="cancel__BTN">Cancel</a>
     </form>
 
     </div>
-    {{>attention}}
+    {{>processcancelled}}
 
 </div>
 

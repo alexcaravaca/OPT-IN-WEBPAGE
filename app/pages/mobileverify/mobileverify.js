@@ -8,20 +8,29 @@ APP.mobileverify = (function(){
     var bindEventsToUI = function() {
         // ...
 
-        $( ".numbersonly" ).keyup(function(e) {
+        $( ".numbersonly" ).keydown(function(e) {
             var key   = e.keyCode ? e.keyCode : e.which;
-
-            if (!( [8, 9, 13, 27, 46, 110, 190].indexOf(key) !== -1 ||
+            if (!( [8, 9, 13, 27, 46, 110].indexOf(key) !== -1 ||
                     (key == 65 && ( e.ctrlKey || e.metaKey  ) ) ||
                     (key >= 35 && key <= 40) ||
                     (key >= 48 && key <= 57 && !(e.shiftKey || e.altKey)) ||
                     (key >= 96 && key <= 105)
                 )) e.preventDefault();
-            else{
-
-                getcheckboxValue();
+        });
 
 
+
+        $( ".numbersonly" ).keyup(function(e) {
+            inputValue1 = document.getElementById("phone-1").value;
+            inputValue2 = document.getElementById("phone-2").value;
+            inputValue3 = document.getElementById("phone-3").value;
+
+
+            if(inputValue1 == "" && inputValue2 == "" && inputValue3 == ""){
+               // $('input[type="checkbox"]').removeAttr('checked');
+              //  console.log("entrooo value" + inputValue1);
+            }else {
+                $('input[type="checkbox"]').prop('checked', 'false');
             }
         });
 
@@ -44,7 +53,7 @@ APP.mobileverify = (function(){
             }
         }
 
-
+        initModal();
     };
 
     var init = function() {
@@ -54,19 +63,37 @@ APP.mobileverify = (function(){
     };
 
 
-    var getcheckboxValue = function () {
+    var initModal = function () {
+        var saveNumberModal = document.getElementById("c__thankyoushort__modal");
+        var cancelModal = document.getElementById('c__processcancelled__modal');
+        var attentionModal = document.getElementById('c__attention__modal');
+        var noCellModal = document.getElementById('c__nocell__modal');
 
-        inputValue1 = document.getElementById("phone-1").value;
-        inputValue2 = document.getElementById("phone-2").value;
-        inputValue3 = document.getElementById("phone-3").value;
+        var btn = document.getElementById("saveNumberBTN");
+        var cancelBtn = document.getElementById("p__mobileverify_cancelBTN");
+        var nomyNumberBtn = document.getElementById("p__mobileverify_nomyNumber");
+        var noNumberBtn = document.getElementById("p__mobileverify__noNumber");
 
-
-        if(inputValue1 == "" && inputValue2 == "" && inputValue3 == ""){
-            $('input[type="checkbox"]').removeAttr('checked');
-        }else {
-            $('input[type="checkbox"]').prop('checked', 'false');
+        btn.onclick = function() {
+            saveNumberModal.style.display = "block";
         }
+
+        cancelBtn.onclick = function() {
+            cancelModal.style.display = "block";
+        }
+
+
+        nomyNumberBtn.onclick = function() {
+            noCellModal.style.display = "block";
+        }
+
+        noNumberBtn.onclick = function() {
+            noCellModal.style.display = "block";
+        }
+
+
     };
+
 
 
     /**

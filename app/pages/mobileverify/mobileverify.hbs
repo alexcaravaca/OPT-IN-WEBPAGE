@@ -20,21 +20,26 @@
                 </div>
 
             <div class="p__mobileverify__terms">
-                 <input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox">
+                 <input id="checkbox-1" class="checkbox-custom" name="checkbox-1" checked type="checkbox">
                  <label for="checkbox-1" class="checkbox-custom-label"><p>By giving us a cell number or a number later converted to a cell number, you agree that we or our service providers can contact you at that number by autodialer, recorded or artificial voice, or a text.  Your phone plan charges may apply.</p></label>
             </div>
 
             <button type="button"  id="saveNumberBTN" class="blue_BTN">Save Number to File</button>
-            <a class="cancel__BTN">Cancel</a><br>
-            <a class="cancel__BTN p__mobileverify__margintop20">The number on file isn’t mine</a>
+            <a id ="p__mobileverify_cancelBTN" class="cancel__BTN">Cancel</a><br>
+            <a id= "p__mobileverify_nomyNumber" class="cancel__BTN p__mobileverify__margintop20">The number on file isn’t mine </a>
             <span class="p__mobileverify__divider">/</span>
-            <a class=" p__mobileverify__link p__mobileverify__margintop20">I do not have a number to provide at this time</a>
+            <a id="p__mobileverify__noNumber" class=" p__mobileverify__link p__mobileverify__margintop20">I do not have a number to provide at this time</a>
 
         </div>
     </div>
     </div>
 
-    {{>timeout}}
+    {{>thankyoushort}}
+    {{>processcancelled}}
+    {{>attention}}
+    {{>nocell}}
 
 </div>
+
+
 

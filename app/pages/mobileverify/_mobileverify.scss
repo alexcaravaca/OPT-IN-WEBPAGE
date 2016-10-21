@@ -1,5 +1,5 @@
 .p__mobileverify{
-
+  height: 660px;
   .p__mobileverify__wrapper{
     margin-left: 40px;
   }
@@ -10,11 +10,12 @@
 
   h2{
     font-size: 32px;
-
+    color: #333333;
   }
   p{
     font-size: 18px;
     width: 690px;
+    color: #333333;
   }
 
 
@@ -33,6 +34,7 @@
     height: 42px;
     width: 62px;
     margin-right: 10px;
+    padding-left: 10px;
 
   }
 
@@ -75,6 +77,8 @@
 
     .p__mobileverify__divider{
       color: #1279bf;
+      margin-left: 4px;
+      margin-right: 1px;
     }
 
 

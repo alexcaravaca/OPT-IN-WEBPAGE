@@ -9,7 +9,7 @@
         <div class="p__mobileEnter__bodyConteriner">
             <div class="p__mobileEnter_container">
                 <div class="p__mobileEnter__error">
-                    <p class="p__mobileEnter__norecord">The number you entered does not match our records. Please enter the number again.</p>
+                    <p class="p__mobileEnter__norecord">The number you provided is not valid. Please enter the number again.</p>
                     <p class="p__mobileEnter__landline">The number provided is a landline.  Please enter your mobile number below.</p>
                 </div>
 
@@ -22,13 +22,13 @@
                     </div>
 
                 <div class="p__mobileEnter__terms">
-                     <input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox">
+                     <input id="checkbox-1" class="checkbox-custom" name="checkbox-1" checked type="checkbox">
                      <label for="checkbox-1" class="checkbox-custom-label"><p>By giving us a cell number or a number later converted to a cell number, you agree that we or our service providers can contact you at that number by autodialer, recorded or artificial voice, or a text.  Your phone plan charges may apply.</p></label>
                 </div>
 
                 <button type="button"  id="saveNumberBTN" class="blue_BTN">Save Number to File</button>
-                <a class="cancel__BTN">Cancel</a><br>
-                <a class="cancel__BTN p__mobileEnter__margintop20">I don’t wish to enter a number at this time</a>
+                <a id="p__mobileEnter_cancelBTN" class="cancel__BTN">Cancel</a><br>
+                <a id ="p__mobileEnter__donotWish" class="cancel__BTN p__mobileEnter__margintop20">I don’t wish to enter a number at this time</a>
 
             </div>
 
@@ -38,32 +38,14 @@
     </div>
 
 
-    <!-- The Modal -->
-    <div id="p__mobileEnter__modal" class="p__mobileEnter__modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-
-            <div class="p__mobileEnter__modal__header">
-                <p>Thank You!</p>
-            </div>
-
-
-            <div class="p__mobileEnter__modal_body">
-
-                <p> We have recorded your update, please note this may take up to 2 days to complete. If you have any questions please contact Citibank on behalf of {Partner} at portfolio toll free number. Thank you.</p>
-                <button class="blue_BTN p__mobileEnter_closeBTN">Close</button>
-
-            </div>
-
-        </div>
-
-    </div>
-
+    {{>thankyoushort}}
+    {{>processcancelled}}
     {{>nocell}}
+
     {{>apologiesalapsed}}
     {{>apologiesprev}}
-    {{>processcancelled}}
+    {{>timeout}}
+
 
 
 

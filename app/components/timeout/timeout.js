@@ -20,12 +20,7 @@ APP.timeout = (function(){
     var initModal = function () {
         // Get the modal
         var modal = document.getElementById('c__timeout__modal');
-        var btn = document.getElementsByClassName("cancel__BTN")[0];
         var closeBTN = document.getElementsByClassName("c__timeout_closeBTN")[0];
-
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
 
         closeBTN.onclick = function() {
             modal.style.display = "none";
