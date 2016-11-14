@@ -26,16 +26,16 @@ APP.processcancelled = (function(){
 
         closeBTN.onclick = function() {
             modal.style.display = "none";
+            bindeventTranslate();
         }
 
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
+                bindeventTranslate();
             }
         }
     };
-
-
 
 
     /**

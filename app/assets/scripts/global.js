@@ -1,10 +1,11 @@
 'use strict';
-
+var isEspanol = false;
 var APP = window.APP = window.APP || {};
 
 APP.global = (function(){
 
     var initGlobalComponents = function() {
+
 
     };
 
