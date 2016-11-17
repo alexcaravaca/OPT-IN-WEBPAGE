@@ -10,6 +10,9 @@ function mobileEntertoEspanish() {
     $("#saveNumberBTN").html("Actualizar");
     $("#p__mobileEnter_cancelBTN").html("Cancelar");
     $("#p__mobileEnter__donotWish").html("No deseo ingresar un número en este momento");
+    $(".p__mobileEnter__norecord").html("El número que ha proporcionado no es válido. Ingrese el número nuevamente.");
+    $(".p__mobileEnter__landline").html("El número proporcionado es un teléfono fijo. Ingrese su número de móvil a continuación:");
+
 
 }
 
@@ -21,6 +24,9 @@ function  mobileEntertoEnglish() {
     $("#saveNumberBTN").html("Update");
     $("#p__mobileEnter_cancelBTN").html("Cancel");
     $("#p__mobileEnter__donotWish").html("I don’t wish to enter a number at this time");
+    $(".p__mobileEnter__norecord").html("The number you provided is not valid. Please enter the number again.");
+    $(".p__mobileEnter__landline").html("The number provided is a landline.  Please enter your mobile number below.");
+
 }
 
 

@@ -1,7 +1,7 @@
 <div class="p__mobileverify" data-action="mobileverify" xmlns="http://www.w3.org/1999/html">
     <div class="p__mobileverify__wrapper">
     <h2>Verify Your Mobile Number</h2>
-    <p>{Customer_Name}, you have been successfully authenticated.<br>Please read the disclosure below and provide your mobile number.</p>
+    <p class="p__mobileverify__subheader_copy">{Customer_Name}, you have been successfully authenticated.<br>Please read the disclosure below and provide your mobile number.</p>
 
 
     <div class="p__mobileverify__bodyConteriner">
@@ -11,7 +11,7 @@
                 <p class="p__mobileverify__landline">The number provided is a landline. Please enter your mobile number below.</p>
             </div>
 
-            <p>Please <span class="bold"> update or confirm</span> your mobile number below: (Ex. (area code) XXX - XXXX)</p>
+            <p class="p__mobileverify__enterNum">Please <span class="bold"> update or confirm</span> your mobile number below: (Ex. (area code) XXX - XXXX)</p>
                 <div class="p__mobileverify__phoneNum">
                     <input class="numbersonly" type="text" id="phone-1" name="phone-1" maxlength="3">
                     <input class="numbersonly" type="text" id="phone-2" name="phone-2" maxlength="3">
@@ -35,9 +35,13 @@
     </div>
 
     {{>thankyoushort}}
+    {{>thankyoushort_es}}
+
     {{>processcancelled}}
-    {{>attention}}
+    {{>process_cancelled_es}}
+
     {{>nocell}}
+    {{>nocell_es}}
 
 </div>
 

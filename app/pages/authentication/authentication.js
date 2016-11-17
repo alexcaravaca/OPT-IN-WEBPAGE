@@ -23,7 +23,7 @@ function updatetoEnglish(){
     $(".p__authentication__copy").multiline("In order to complete the account update, please verify your identity by entering \nyour five digit billing zip code associated with your {Partner} account.");
     $(".p__authentication__zipform label").text("Billing Zip Code");
     $("#zipBTN").text("Proceed");
-    $("#p__authentication__cancel_EN").text("Cancelar");
+    $("#p__authentication__cancel_EN").text("Cancel");
     $(".p__authentication__error p").text("The number you entered does not match our records. Please enter the number again.");
 
 };

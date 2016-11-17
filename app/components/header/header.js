@@ -6,12 +6,18 @@ function bindeventTranslate(){
         isEspanol = true;
         $( ".c-header__espanol").hide();
         $( ".c-header__english").show();
+        $(".c__footer__items_es").show();
+        $(".c__footer__items").hide();
         if (currentPath.indexOf("") !== -1) {
             updateEspanish();
         }
 
-        if(currentPath.indexOf("mobileenter") !== -1) {
+        if(currentPath.indexOf("mobileEnter") !== -1) {
             mobileEntertoEspanish();
+        }
+
+        if(currentPath.indexOf("mobileverify") !== -1) {
+            mobileverifytoEspanish();
 
         }
 
@@ -23,10 +29,15 @@ function bindeventTranslate(){
         isEspanol = false;
         $( ".c-header__espanol").show();
         $( ".c-header__english").hide();
+        $(".c__footer__items_es").hide();
+        $(".c__footer__items").show();
         currentPath = $(location).attr('href');
 
-        if(currentPath.indexOf("mobileenter") !== -1) {
+        if(currentPath.indexOf("mobileEnter") !== -1) {
             mobileEntertoEnglish();
+        }else if (currentPath.indexOf("mobileverify") !== -1) {
+            mobileverifytoEnglish();
+
         }else if (currentPath.indexOf("") !== -1) {
 
             updatetoEnglish();
